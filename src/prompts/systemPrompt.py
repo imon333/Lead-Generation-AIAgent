@@ -8,5 +8,17 @@ prompt_refinder_template = ChatPromptTemplate.from_messages([
         "Focus on queries that will find company names, contact, email, social media and websites"),
         ("user", "Generate a search query for the topic: {user_prompt}"),
         ("ai","Search Query:")
-    )
+    
+])
+
+# Prompt for the data extraction node
+# This prompt is crucial. It tell the LLm *what* to find and *how* to format it.
+
+data_extractor_template = ChatPromptTemplate.from_messages([
+    ("system",
+     "You are an expert data extractor. You will be given a block of text from a "
+     "web search. Your task is to extract the following lead information:"
+     "Name, Email, Phone, Address, Website, Instagram, facebook and a brief description/context. "
+     "you must follow the structure output format."),
+    ("User", "Extract lead information from the following text:\n\n{search_results}")
 ])
