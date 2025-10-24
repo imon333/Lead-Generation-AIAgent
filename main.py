@@ -1,7 +1,6 @@
-import sys
-import os
-from pathlib import Path
-
+#import sys
+#import os
+#from pathlib import Path
 
 import dotenv 
 dotenv.load_dotenv()
@@ -16,7 +15,7 @@ def run_tavily_test():
     print("--- Running Tavily Search Test ---")
     
     # You can change the test query
-    test_query = "latest news on AI developments"
+    test_query = "GE Vernova latest cyber security offering"
     
     print(f"Query: {test_query}")
     
