@@ -1,6 +1,6 @@
 from langchain_core.prompts import ChatPromptTemplate
 
-prompt_refinder_template = ChatPromptTemplate.from_messages([
+prompt_refiner_template = ChatPromptTemplate.from_messages([
     (
         "system",
         "You are an expert search query generator. Your goal is to take a user's topic"
