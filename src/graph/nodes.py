@@ -64,7 +64,8 @@ def extract_lead_data(state: GraphState):
 
     try:
         response = extractor_chain.invoke({"search_results": search_results})
-        extracted_leads = response.content # Access the .leads attribute
+        extracted_leads = response.leads # AChange .content to .leads
+        # ---------------------
         print(f"Extracted {len(extracted_leads)} leads.")
         return {"extracted_leads": extracted_leads}
 

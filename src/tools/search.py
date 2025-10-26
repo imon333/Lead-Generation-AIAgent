@@ -15,8 +15,8 @@ def get_search_results(query: str):
     try:
         results = tavily_client.search(
             query=query,
-            search_depth="basic",
-            max_results=5
+            search_depth="advanced",
+            max_results= 30
         )
         
         return "\n---\n".join([r['content'] for r in results['results']])

@@ -20,5 +20,5 @@ data_extractor_template = ChatPromptTemplate.from_messages([
      "web search. Your task is to extract the following lead information:"
      "Name, Email, Phone, Address, Website, Instagram, facebook and a brief description/context. "
      "you must follow the structure output format."),
-    ("User", "Extract lead information from the following text:\n\n{search_results}")
+    ("user", "Extract lead information from the following text:\n\n{search_results}")
 ])

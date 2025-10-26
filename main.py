@@ -13,7 +13,7 @@ def main():
     """
 
     # Check if API keys are set
-    if not os.environ.get("OPENAI_API_KEY") or not os.environ.get("OPENAI_API_SECRET"):
+    if not os.environ.get("OPENAI_API_KEY") or not os.environ.get("TAVILY_API_KEY"):
         print("Error: API keys for OPENAI_API_KEY and TAVILY_API_KEY")
         print("must be set in a .env file")
 
@@ -49,3 +49,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
