@@ -62,4 +62,14 @@ def extract_lead_data(state: GraphState):
 
     extractor_chain = data_extractor_template | model.with_structured_output(Leads)
 
+    try:
+        response = extractor_chain.invoke({"search_results": search_results})
+        extracted_leads = response.content # Access the .leads attribute
+        print(f"Extracted {len(extracted_leads)} leads.")
+        return {"extracted_leads": extracted_leads}
+
+    except Exception as e:
+        print(f"Error during extraction: {e}")
+        return {"extracted_leads": []} # Return empty list on failure
+
 
