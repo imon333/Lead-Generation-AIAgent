@@ -73,3 +73,16 @@ def extract_lead_data(state: GraphState):
         return {"extracted_leads": []} # Return empty list on failure
 
 
+def save_leads_to_file(state: GraphState):
+    """
+    Node 4 : Save the extracted leads to an Excel file.
+    """
+    print("---NODE: save_leads_to_file---")
+    leads = state['extracted_leads']
+
+    # Convert Pydantic models to dictionaries for pandas
+    leads_as_dicts = [lead.model_dump() for lead in leads] # -- model_dump has been use instead of the  lead.dict()
+    filepath = save_leads_to_excel(leads_as_dicts)
+    print(f"File Save Status: {filepath}")
+
+    return {"final_filepath": filepath}
