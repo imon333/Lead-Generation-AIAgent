@@ -67,7 +67,7 @@ python main.py
 You’ll be prompted to enter the type of leads you want to generate. The system will run the full pipeline and save your structured results automatically.
 
 
---- Imon Hosen ---- twiter: @ImonHosen3
+--- Imon Hosen ---- twitter: @ImonHosen3
 
 
 
